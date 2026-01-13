@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret Surprise 🎁</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    color: white;
+}
+.box {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+}
+button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h2>🔐 Enter Secret Password</h2>
+    <input type="password" id="pwd" placeholder="Password">
+    <br>
+    <button onclick="check()">Unlock 🎁</button>
+    <p id="msg"></p>
+</div>
+
+<script>
+function check() {
+    let password = document.getElementById("pwd").value;
+    if (password === "birthday123") {   // 👈 CHANGE PASSWORD HERE
+        window.location.href = "page1.html";
+    } else {
+        document.getElementById("msg").innerHTML = "❌ Wrong password";
+    }
+}
+</script>
+
+</body>
+</html>
